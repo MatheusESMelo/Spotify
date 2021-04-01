@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Spotify{% endblock %}
+
+{% block content %}
+
+<ul>
+    {% for info_musica in data %}
+        <li>{{ info_musica.musica }} - {{ info_musica.artista }} - {{ info_musica.album }}</li>
+    {% endfor %}
+    </ul>
+
+{% endblock %}
